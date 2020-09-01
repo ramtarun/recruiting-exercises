@@ -71,6 +71,15 @@ class MyTestCase(unittest.TestCase):
                                                             {'name': 'qwe', 'inventory': {'oranges': 4}}])),
                          'actual')
 
+    # Order can be shipped with fewer inventories leaving out expensive inventories thereby saving cost
+    def test_case_8(self):
+        self.assertEqual(format_output([{'owd': {'apple': 1, 'oranges': 2}}, {'wer': {'oranges': 2, 'bananas': 5}}]),
+                         format_output(inventory_allocator({'apple': 1, 'oranges': 4, 'bananas': 5},
+                                                           [{'name': 'owd', 'inventory': {'apple': 1, 'oranges': 2}},
+                                                            {'name': 'wer', 'inventory': {'oranges': 2, 'bananas': 5}},
+                                                            {'name': 'qwe', 'inventory': {'oranges': 4}}])),
+                         'actual')
+
 
 if __name__ == '__main__':
     unittest.main()
