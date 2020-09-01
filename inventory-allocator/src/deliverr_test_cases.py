@@ -1,5 +1,5 @@
 import unittest
-from src.deliverr_code import inventory_allocator
+from deliverr_code import inventory_allocator
 
 expected_output = []
 actual_output = []
