@@ -19,4 +19,4 @@ def inventory_allocator(order, inventory_list):
         else:
             allocated = True
 
-    return allocated_inventories[::-1]
+    return allocated_inventories
