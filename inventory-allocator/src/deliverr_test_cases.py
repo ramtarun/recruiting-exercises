@@ -86,7 +86,7 @@ class MyTestCase(unittest.TestCase):
                          format_output(inventory_allocator({}, [{'name': 'owd', 'inventory': {'apple': 0}}])),
                          'actual')
 
-    # Order is empty
+    # Inventory is empty
     def test_case_10(self):
         self.assertEqual(format_output([]),
                          format_output(inventory_allocator({'apple': 1}, [])),
